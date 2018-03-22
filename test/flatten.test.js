@@ -5,22 +5,9 @@ const sinon = require('sinon');
 let flatten = require('../questions/flatten');
 
 describe('Flatten', () => {
-    it('should return a single array length total of array that contains sub-arrays ', (done) => {
-        const mockArray = [
-            'one',
-            'two',
-            [
-                'apple',
-                'orange'
-            ],
-            'five'
-        ];
-
-        const arrayResults = flatten(mockArray);
-
-        expect(arrayResults.length).to.equal(5);
-
-        done();
+    it('should return a single array length total of array that contains sub-arrays ', () => {
+        //Remove when writing test
+        expect(false).to.equal(true);
     });
 
 //What else could we test here?

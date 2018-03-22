@@ -7,35 +7,7 @@
  */
 
 class Queue {
-    constructor() {
-        this.keys = [];
-        this.items = {};
-    }
 
-    add(key, fn) {
-        this.items[key] = fn;
-
-        this.keys.push(key);
-    }
-
-    remove(key) {
-        delete this.items[key];
-    }
-
-    get(key) {
-        return this.items[key];
-    }
-
-    drain() {
-        this.keys.forEach((key) => {
-            this.get(key)();
-            this.remove(key);
-        });
-    }
-
-    getKeys() {
-        return Object.keys(this.items);
-    }
 }
 
 module.exports = Queue;
